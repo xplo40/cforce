@@ -1,0 +1,1113 @@
+/********************* MAIN PAGE *********************/
+* {
+    margin: 0;
+}
+html{ 
+    height: 100%;
+    overflow:auto;
+}
+@font-face {
+    font-family: segoe_ui;
+    src: url('fonts/segoeui.ttf');
+}
+@font-face {
+    font-family: segoe_ui_sb;
+    src: url('fonts/seguisb.ttf');
+}
+@font-face {
+    font-family: segoe_ui_b;
+    src: url('fonts/segoeuib.ttf');
+}
+@font-face {
+    font-family: segoe_ui_i;
+    src: url('fonts/segoeuii.ttf');
+}
+@font-face {
+    font-family: serpentine;
+    src: url('fonts/SerpentineEF-BoldItalic.otf');
+}
+body{ 
+    height: 100%; 
+    padding: 0; 
+    font-family: segoe_ui; 
+    font-size: 11px;
+    overflow:auto;
+}
+#wrapper{ 
+    position: relative;
+    min-height: 100%; 
+    height: auto !important; 
+    height: 100%; 
+    display: none; 
+    color: #8a8a8a; 
+    top: 0;
+    margin: 0 auto -295px; 
+}
+#container{
+    position: relative;
+    width:100%;
+    height: auto; 
+    color: #000;
+}
+.background_img_top{
+    background-attachment: scroll;
+    width: 592px;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+}
+#background_tl{
+    background: url('../images/background_slice_l.jpg') repeat-y;
+    top: 0;
+    left: 0;
+}
+#background_tr{
+    background: url('../images/background_slice_r.jpg') repeat-y;
+    top: 0;
+    right: 0;
+}
+.logo{ 
+    padding: 5px; 
+    width: 230px; 
+    height: 153px; 
+    float: left; 
+    border: 0; 
+    position: absolute;
+}
+
+/********************* UTILITY CLASSES *********************/
+.column_spacing{
+    width: 15px;
+}
+.row_spacing{
+    height: 15px;
+}
+.tab_spinner{
+    margin: 50px 440px;
+}
+.listing_spinner{
+    margin: 20px 345px;
+}
+.detail_spinner{
+    margin: 20px 445px;
+}
+.validation_error{
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background: #F00;
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    color: #FFF;
+    font-size: 8pt;
+    vertical-align: middle;
+    top: 4px;
+    right: 4px;
+    width: auto;
+    height: 16px;
+    text-align: center;
+    padding: 0 10px;
+}
+.push{
+    height: 200px;
+}
+.error{ 
+    color: #cc0000; 
+    font-weight: bold; 
+    text-align: center;
+}
+.default{
+    font-family: segoe_ui_i !important;
+    color: #adacad;
+    font-size: 10pt;
+}
+.to_top{
+    position: fixed; 
+    bottom: 2px; 
+    right: 2px;
+    font-size: 12pt;
+    color: #FFF !important;
+    padding: 2px;
+    text-decoration: none;
+    background: #CCC;
+}
+
+/********************* HEADER *********************/
+#header{
+    height: 150px;
+    background: url('../images/header_background.png') repeat-x;
+    z-index: 10;
+    -moz-box-shadow: 0px 4px 8px #00131e; 
+    -webkit-box-shadow: 0px 4px 8px #00131e;
+    box-shadow: 0px 4px 8px #00131e;
+    position: relative;
+}
+#header #header_container{
+    width: 1000px;
+    margin: auto auto 0px;
+    position: relative;
+}
+#header #logo{
+    width: 591px;
+    height: 49px;
+    background: url('../images/CForceLogo.png');
+    float: left;
+    position: absolute;
+    bottom: -140px;
+}
+#header p{ 
+    color: #a7b8cd; 
+    margin: 12.5px 15px 0 0; 
+    text-align: right;
+    right: 104px;
+    float: right;
+    position: absolute;
+    bottom: -140px;
+    font-family: segoe_ui_sb;
+    font-size: 10pt; 
+}
+#header a{ 
+    text-decoration: none; 
+    color: #ffffff; 
+    margin: 13px 15px 0 0;
+    text-align: right;
+    float: right;
+    position: absolute;
+    bottom: -140px;
+    font-family: segoe_ui_b;
+    font-size: 9pt; 
+}
+#header #logout_btn{ 
+    right: 0; 
+}
+#header #help_modal_btn{ 
+    right: 0;
+}
+#header #help_modal_btn2{ 
+    right: 54px;
+}
+#header #product{ 
+    right: 54px;
+}
+#header a:hover{ 
+    text-decoration: underline; 
+}
+#bar1{
+    position: relative;
+    background: #01253B;
+    height: 55px;
+    width: 100%;
+}
+#bar2{
+    position: relative;
+    background: #121419;
+    height: 20px;
+    width: 100%;
+}
+
+/********************* LOGIN *********************/
+#content{
+    width: 1000px;
+    height: 300px;
+    margin: 50px auto 50px;
+    -moz-box-shadow: 0px 3px 6px #888; 
+    -webkit-box-shadow: 0px 3px 6px #888;
+    box-shadow: 0px 3px 6px #888;
+    font-family: segoe_ui;
+}
+#intro_text{
+    float: right;
+    width: 450px;
+    height: 88px;
+    margin: 80px 50px 0 0;
+}
+#intro_text h1{
+    color: #002c3d;
+    font-family: serpentine;
+    font-size: 25pt;
+    font-weight: normal;
+}
+#intro_text p{
+    color: #7d7d7d;
+    font-family: segoe_ui;
+    font-size: 10pt;
+    font-weight: normal;
+}
+#login_line{
+    float: right;
+    height: 220px;
+    width: 0;
+    border: 1px #EEE solid;
+    margin: 40px 70px 0 0;
+}
+#login{ 
+    padding: 20px; 
+    margin: 40px 30px 0 30px;
+    color: #FFFFFF; 
+    width: 300px; 
+    float: left;
+}
+#login table{
+    width: 100%;
+}
+#login table tr th{ 
+    font-weight: normal; 
+    font-size: 10pt; 
+    text-align: left;
+    padding: 5px 0 0;
+}
+#login table tr td{ 
+    padding: 0 0 5px;
+}
+#login input[type="text"], input[type="password"]{ 
+    padding: 2px; 
+    width: 100%; 
+    border: 1px solid #CCCC99; 
+}
+#login #login_button{
+    font-size: 10pt;
+    float: left;
+    margin-top: 20px;
+}
+#login #login_button span{
+    padding: 3px 20px;
+}
+#login #change_password{
+    float: right;
+    color: #666666;
+    background: none;
+    border: none;
+    font-size: 10pt;
+    margin-top: 20px;
+}
+#login #change_password:hover{
+    color: #fdb35d;
+}
+#login #change_password span{
+    padding: 3px 0 3px 20px;
+}
+
+/********************* TABS *********************/
+#tabs{
+    background: none; 
+    border: 0;
+    padding: 0;
+    margin: 0 auto;
+    width: 1000px;
+    position: relative;
+    top: -75px;
+}
+#tabs .ui-tabs-nav { 
+    border: 0;
+    padding: 0;
+    height: 55px;
+    background: none;
+}
+#tabs .ui-tabs-nav li{ 
+    background: none;
+    border: 0;
+    margin: 0;
+}
+#tabs .ui-tabs-nav li a{
+    background: #01253B;
+    text-align: center;
+    width: 164px;
+    height: 54px;
+    padding: 0;
+    border: 1px solid #21446f;
+    margin: -1px -1px 0 0;
+}
+#tabs .ui-tabs-nav li a p{
+    line-height: 55px;
+    font-family: segoe_ui_sb;
+    font-size: 10pt;
+}
+#tabs .ui-tabs-nav .ui-state-default a{
+    color: #CCCCCC;
+}
+#tabs .ui-tabs-nav .ui-state-hover a{
+    background: #006299;
+}
+#tabs .ui-tabs-nav .ui-state-active a{
+    background: #eb6300;
+    color: #FFFFFF;
+}
+#tabs .ui-tabs-nav a:focus{
+    outline: none;
+}
+#tabs .ui-tabs-panel { 
+    padding: 20px 0 0;
+}
+
+/********************* DATA_TABLE *********************/
+.data_table{
+    border-collapse: collapse; 
+    border: 0;
+    font-family: segoe_ui;
+    background: #FFF;
+    width: 100%;
+}
+.data_table tr{
+    cursor: pointer;
+    border: 1px solid #AAA;
+    color: #636363;
+}
+.data_table tr:hover{
+    background-color: #EB6300;
+    color: #FFF;
+}
+.data_table th{
+    text-align: left; 
+    font-size: 10pt; 
+    font-weight: normal;
+    padding: 0 15px 5px;
+    color: #FFF;
+    background-color: #658db7;
+    cursor: default;
+}
+.data_table td{
+    border: 1px;
+    text-align: left; 
+    font-size: 10pt; 
+    padding: 2px 0 2px 15px; 
+}
+.data_table td div{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+.data_table td a{
+    color: #000000;
+    font-size: 10pt;
+}
+/*********************Data_Table_Summary*****************/
+.data_summary{
+    border-collapse: collapse; 
+    border: 0;
+    font-family: segoe_ui;
+    background: #FFF;
+    width: 100%;
+}
+.data_summary tr{
+    border: 1px solid #AAA;
+    color: #636363;
+}
+
+
+.data_summary th{
+    text-align: left; 
+    font-size: 10pt; 
+    font-weight: normal;
+    padding: 0 15px 5px;
+    color: #FFF;
+    background-color: #658db7;
+    cursor: default;
+}
+.data_summary td{
+    border: 1px;
+    text-align: left; 
+    font-size: 10pt; 
+    padding: 2px 0 2px 15px; 
+}
+.data_summary td div{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+.data_summary td a{
+    color: #000000;
+    font-size: 10pt
+}
+/********************* DETAILS PAGE *********************/
+.section_header{
+    width: 100%;
+    height: 25px;
+    float: right;
+    color: #464647;
+    border: 1.5px solid #aaa;
+    font-family: segoe_ui;
+    font-size: 11pt;
+    font-weight: bold;
+    padding-left: 15px;
+    background: #c5c4c3; /* Old browsers */
+    background: -moz-linear-gradient(top,  #c5c4c3 1%, #e4e3e2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#c5c4c3), color-stop(100%,#e4e3e2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #c5c4c3 1%,#e4e3e2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #c5c4c3 1%,#e4e3e2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #c5c4c3 1%,#e4e3e2 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #c5c4c3 1%,#e4e3e2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5c4c3', endColorstr='#e4e3e2',GradientType=0 ); /* IE6-9 */
+}
+.section_header p{
+    vertical-align: middle;
+    margin: 3px;
+}
+.section_div{
+    float: right;
+    font-size: 10pt;
+    -moz-box-shadow: 2px 3px 6px #464646;
+    -webkit-box-shadow: 2px 3px 6px #464646;
+    box-shadow: 2px 3px 6px #464646; 
+    width: 100%;
+    height: 100%;
+    min-height: 46px;
+    background: #FFFFFF url('../images/module_spinner.gif') center no-repeat;
+}
+#button_row{
+    text-align: right;
+}
+#detail_table{
+    text-align: left;
+    font-size: 10pt;    
+}
+#status{
+    font-size: 14pt;
+}
+#status fieldset{
+    padding-left: 30px;
+}
+#status input{
+    padding-left: 20px;
+}
+
+/********************* CASES *********************/
+tr.spaceUnder > td{
+  padding-bottom: 1em;
+}
+
+#caseinfo th{
+   font-weight: bold;     
+}
+.notification{
+    position: absolute;
+    text-align: center;
+    color: #FFF;
+    background-color: #00acfa;
+    width: 20px;
+    height: 20px;
+}
+#case_radio_set label{ 
+    height: 25px;
+    -moz-border-radius:0; 
+    -webkit-border-radius:0; 
+    -border-radius:0; 
+    border: 1px solid #21446f !important;
+    line-height: 25px;
+}
+#case_radio_set .ui-state-default{
+    color: #CCCCCC;
+    background: #01253b;
+}
+#case_radio_set .ui-state-hover{
+    background: #006299;
+}
+#case_radio_set .ui-state-active {
+    background: #eb6300;
+    color: #FFFFFF;
+}
+#case_create_btn{
+    float: right;
+    margin: 10px;
+}
+#case_create .section_header{
+    padding: 0;
+    border: 0;
+    margin: 10px 0 0;
+}
+#case_create .section_div{
+    height: auto;
+    margin: 0 0 10px;
+}
+.case_panel{
+    overflow-y: auto;
+    height: 220px;
+}
+
+/********************* HOME *********************/
+#merchant_header_h{
+    padding: 20px 0;
+}
+#home_layout > tbody > tr > td{
+    padding: 0;
+}
+#home_layout #news{
+    width: 990px;
+    height: 77px;
+    margin: 10px 0 10px;
+}
+#home_layout #news .section_header{
+    width: 974px;
+}
+#home_layout #news .section_div th{
+    color: #888888;
+    font-family: segoe_ui;
+    font-size: 10pt;
+    font-weight: normal;
+    padding: 0 10px;
+}
+#home_layout #news .section_div td{
+    font-family: segoe_ui_b;
+}
+#home_layout #merchant_status{
+    width: 475px;
+    height: 298px;
+    margin: 10px 10px 10px 0;
+}
+#home_layout #merchant_status .section_header{
+    width: 459px;
+}
+#home_layout #cases{
+    width: 495px;
+    height: 298px;
+    margin: 10px;
+}
+#home_layout #cases .section_header{
+    width: 479px;
+}
+#home_layout #cases #case_radio_set label{ 
+    width: 162px;
+    margin-right: -5px;
+}
+#home_layout #merchant_list{
+    width: 475px;
+    height: 243px;
+    margin: 10px 10px 10px 0;
+}
+#home_layout #merchant_list .section_header{
+    width: 459px;
+}
+#home_layout #boarded{
+    width: 495px;
+    height: 243px;
+    margin: 10px 0 10px 10px;
+}
+#home_layout #boarded .section_header{
+    width: 479px;
+}
+#home_layout #processing_summary_list{
+    width: 990px;
+    height: 100%;
+    margin: 10px 0;
+}
+#home_layout #processing_summary_list .section_header{
+    width: 974px;
+}
+#home_layout #processing{
+    width: 990px;
+    height: 300px;
+    margin: 10px 0;
+}
+#home_layout #processing .section_header{
+    width: 974px;
+}
+
+/********************* AGENTS *********************/
+#agent_header{
+    padding: 20px 0;
+}
+#agent_search{
+    width: 300px;
+    margin-left: 190px;
+}
+#add_agent_btn{
+    float: right;
+    height: 23px;
+    margin-right: 10px;
+}
+#add_agent_btn span{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#agent_content{
+    background: none;
+    overflow: auto;
+    width: 100%
+}
+#infobox{
+    width: 160px;
+    -moz-box-shadow:    2px 3px 6px 1px #888888;
+    -webkit-box-shadow: 2px 3px 6px 1px #888888;
+    box-shadow:         2px 3px 6px 1px #888888; 
+    float: left;
+    background: #FFF;
+    margin: 0 0 10px 10px;
+    text-align: center;
+}
+#infobox .section_header{
+    width: 143px;
+    text-align: left;
+}
+#infoicons{
+    width: 130px;
+    margin-top: 70px;
+    text-align: center;
+}
+#fire1{
+    margin: 25px 5px 0 0;
+}
+#fire2{
+    margin: 6px 0 0 4px;
+}
+#fire3{
+    margin: 12px 0 25px;
+}
+#agent_listing_box{
+    float: right;
+    width: 800px;
+    margin: 0 10px 10px 0;
+    -moz-box-shadow:    1px 2px 6px 1px #888888;
+    -webkit-box-shadow: 1px 2px 6px 1px #888888;
+    box-shadow:         1px 2px 6px 1px #888888; 
+    background: #FFFFFF;
+}
+#agent_listing_box .section_header{
+    width: 783px;
+}
+#agent_listing{
+   width: 800px;
+}
+#add_agent_modal{
+    overflow: hidden;
+}
+#add_agent_modal input{
+    width: 100%;
+    margin-right: 20px;
+}
+#add_agent_modal th{
+    text-align: right;
+}
+/********************* AGENT DETAIL *********************/
+#agent_detail_layout{
+    margin-top: -55px;
+}
+#agent_detail_layout > tbody > tr > td{
+    padding: 0;
+}
+#agent_detail_layout #header_button_row{
+    float: right;
+    margin-bottom: 10px;
+}
+#agent_detail_layout #agent_detail{
+    width: 990px;
+    height: 100%;
+    margin: 10px 0 10px;
+}
+#agent_detail_layout #agent_detail .section_header{
+    width: 974px;
+}
+#agent_detail_layout #agent_detail tr{
+    border: 1px #CCC solid;
+}
+#agent_detail_layout #agent_detail th{
+    text-align: left;
+    font-family: segoe_ui;
+    font-size: 12pt;
+    font-weight: normal;
+    color: #666666;
+    padding: 2px 0 0 10px;
+}
+#agent_detail_layout #agent_detail td{
+    text-align: left;
+    font-family: segoe_ui_b;
+    font-size: 12pt;
+}
+#agent_detail_layout #top_merchants_list{
+    width: 475px;
+    height: 243px;
+    margin: 10px 10px 10px 0;
+}
+#agent_detail_layout #top_merchants_list .section_header{
+    width: 459px;
+}
+#agent_detail_layout #status_chart{
+    width: 495px;
+    height: 243px;
+    margin: 10px 0 10px 10px;
+}
+#agent_detail_layout #status_chart .section_header{
+    width: 479px;
+}
+#agent_detail_layout #boarded_graph{
+    width: 990px;
+    height: 243px;
+    margin: 10px 0;
+}
+#agent_detail_layout #boarded_graph .section_header{
+    width: 974px;
+}
+#agent_detail_layout #processing_summary_list{
+    width: 990px;
+    height: 46px;
+    margin: 10px 0;
+}
+#agent_detail_layout #processing_summary_list .section_header{
+    width: 974px;
+}
+#agent_detail_layout #processing_graph{
+    width: 990px;
+    height: 300px;
+    margin: 10px 0;
+}
+#agent_detail_layout #processing_graph .section_header{
+    width: 974px;
+}
+
+/********************* MERCHANTS *********************/
+#merchant_header_m{
+    padding: 20px 0;
+}
+#merchant_header #merchant_search{
+    width: 300px;
+    margin-left: 190px;
+}
+#add_merchant_btn{
+    float: right;
+    height: 23px;
+    margin-right: 10px;
+}
+#add_merchant_btn span{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#merchant_content{
+    background: none;
+    overflow: auto;
+    width: 100%
+}
+#merchant_listing_box{
+    float: right;
+    width: 800px;
+    margin: 0 10px 10px 0;
+    -moz-box-shadow:    1px 2px 6px 1px #888888;
+    -webkit-box-shadow: 1px 2px 6px 1px #888888;
+    box-shadow:         1px 2px 6px 1px #888888; 
+    background: #FFFFFF;
+}
+#merchant_listing_box .section_header{
+    width: 783px;
+}
+#merchant_listing{
+   width: 800px;
+}
+#add_merchant_modal{
+    overflow: hidden;
+    position: relative;
+}
+#add_merchant_modal td{
+    position: relative;
+}
+#add_merchant_modal input{
+    width: 100%;
+    margin-right: 20px;
+}
+#add_merchant_modal input[type=checkbox]{
+    width: 20px;
+    margin-right: 20px;
+}
+#add_merchant_modal th{
+    font-size: 12px;
+    text-align: right;
+}
+
+/********************* MERCHANT DETAIL *********************/
+#merchant_detail_layout{
+    margin-top: -55px;
+}
+#merchant_detail_layout > tbody > tr > td{
+    padding: 0;
+}
+#merchant_detail_layout #header_button_row{
+    float: right;
+    margin-bottom: 10px;
+}
+#merchant_detail_layout #merchant_detail{
+    width: 990px;
+    height: 100%;
+    margin: 10px 0 10px;
+}
+#merchant_detail_layout #merchant_detail .section_header{
+    width: 974px;
+}
+#merchant_detail_layout #merchant_detail tr{
+    border: 1px #CCC solid;
+}
+#merchant_detail_layout #merchant_detail th{
+    text-align: left;
+    font-family: segoe_ui;
+    font-size: 12pt;
+    font-weight: normal;
+    color: #666666;
+    padding: 2px 0 0 10px;
+}
+#merchant_detail_layout #merchant_detail td{
+    text-align: left;
+    font-family: segoe_ui_b;
+    font-size: 12pt;
+}
+#merchant_detail_layout #merchant_notes{
+    width: 990px;
+    height: 150px;
+    margin: 10px 0;
+}
+#merchant_detail_layout #merchant_notes .section_header{
+    width: 974px;
+}
+#merchant_detail_layout #merchant_notes .section_div{
+    overflow-y: auto;
+    height: 150px;
+}
+#merchant_detail_layout #processing_summary_list{
+    width: 990px;
+    height: 46px;
+    margin: 10px 0;
+}
+#merchant_detail_layout #processing_summary_list .section_header{
+    width: 974px;
+}
+#merchant_detail_layout #status{
+    width: 160px;
+    height: 153px;
+    margin: -213px 10px 10px 0;
+    font-family: segoe_ui_b;
+    font-size: 11pt;
+    float: left;
+}
+#merchant_detail_layout #status .section_header{
+    width: 144px;
+}
+#merchant_detail_layout #status input{
+    margin: 4px 10px 4px 35px;
+}
+#merchant_detail_layout #processing_graph{
+    width: 990px;
+    height: 300px;
+    margin: 10px 0;
+}
+#merchant_detail_layout #processing_graph .section_header{
+    width: 974px;
+}
+#edit_merchant_modal{
+    overflow: hidden;
+}
+#edit_merchant_modal input{
+    width: 100%;
+    margin-right: 20px;
+}
+#edit_merchant_modal input[type=checkbox]{
+    width: 20px;
+    margin-right: 20px;
+}
+#edit_merchant_modal th{
+    text-align: right;
+}
+
+/********************* PROCESSING *********************/
+#processing_layout > tbody > tr > td{
+    padding: 0;
+}
+#processing_layout #cmv_button{
+    margin-top: 20px;
+}
+#processing_layout #processing_graph{
+    width: 990px;
+    height: 300px;
+    margin: 20px 0 10px;
+}
+#processing_layout #processing_graph .section_header{
+    width: 974px;
+}
+#processing_layout #processing_summary_list{
+    width: 990px;
+    height: 46px;
+    margin: 20px 0 10px;
+}
+#processing_layout #processing_summary_list .section_header{
+    width: 974px;
+}
+#processing_layout #merchant_processing_list{
+    width: 990px;
+    height: 500px;
+    margin: 20px 0 10px;
+}
+#processing_layout #merchant_processing_list .section_header{
+    width: 974px;
+}
+#processing_layout #merchant_processing_list .section_div{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/********************* DOCUMENTS *********************/
+#documents_layout{
+    padding-top: 20px;
+} 
+.document_table tr:hover{
+    background: #FFFFFF;
+    cursor: default;
+}
+
+/********************* TOOlS ************************/
+#tools_layout > tbody > tr > td{
+    padding: 0;
+}
+#tools_layout #dda_action_request{
+    width: 790px;
+    height: 100%;
+    margin: 10px 0 10px;
+}
+#tools_layout #dda_action_request .section_header{
+    width: 774px;
+}
+#tools_layout #dda_action_request .section_div{
+    background: #FFF;
+}
+#tools_layout #dda_action_request td,#tools_layout #dda_action_request th{
+    width: 25%;
+    font-size: 14px;
+    text-align: left;
+    padding: 0 10px;
+}
+/********************* FEEDBACK *********************/
+#feedback{
+    width: 400px;
+    height: 180px;
+    padding: 10px;
+    margin: 0 auto 0;
+    color: #888;
+}
+
+#feedback_subtitle{
+   font-size: 7pt;
+   text-align: center;
+   padding: 5px;
+   color: #888;
+}
+
+#feedback_ti{
+    width: 100%;
+    height: 100px;
+    color: #888;
+	border: 3px solid #cccccc;
+}
+
+#submit_feedback{
+    float: right;
+}
+
+#feedback_message{
+    text-align: left;
+    width: 250px;
+    float: left;
+}
+
+/********************* FOOTER *********************/
+#bar3{
+    background: #20436c;
+    height: 80px;
+    width: 100%;
+    position: relative;
+    -moz-box-shadow: 0px 4px 8px #00131e; 
+    -webkit-box-shadow: 0px 4px 8px #00131e;
+    box-shadow: 0px 4px 8px #00131e;
+    z-index: 10;
+}
+#bar4{
+    background: #01253b;
+    height: 120px;
+    width: 100%;
+    position: relative;
+}
+#footer{ 
+    height: 95px;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+    z-index: 10;
+    color: white;
+}
+#cms_logo img{ 
+    height: 24px; 
+    width: 89px; 
+    margin-bottom: 5px;
+}
+.copywrite_1{
+    font-family: segoe_ui_sb;
+    font-size: 10pt;
+}
+.copywrite_2{
+    font-family: segoe_ui;
+    font-size: 7pt;
+    color: #a7b8cd;
+}
+#contact_info{
+    float: right;
+    text-align: right;
+}
+.contact_1{
+    font-family: segoe_ui_b;
+    font-size: 14pt;
+}
+.contact_2{
+    font-family: segoe_ui;
+    font-size: 8pt;
+    color: #a7b8cd;
+    margin-right: 10px;
+    position: relative;
+    bottom: 2px;
+}
+.contact_3{
+    font-family: segoe_ui_b;
+    font-size: 20pt;
+}
+.contact_4{
+    font-family: segoe_ui_sb;
+    font-size: 14pt;
+    color: #a7b8cd;
+}
+/********************* WEATHER *********************/
+#weather_widget * {
+	margin:0px;
+	padding:0px;
+	font-family:arial;
+	font-size:14px;
+}
+
+#weather_widget {
+	border:1px solid #444;
+	background:#EEE;
+	width:275px;
+	padding:15px;
+	overflow:auto;
+}
+
+#weather_img {
+	float:left;
+	padding-right:20px;
+}
+
+#weather_country {
+	font-weight:bold;
+}
+
+#weather_city {
+	font-size:10px;
+}
+
+#weather_temp {
+	margin-top:5px;
+}
+
+#weather_cond {
+	margin-top:5px;
+	font-style:italic;
+}
+
+#weather_conditions {
+	float:left;
+}
